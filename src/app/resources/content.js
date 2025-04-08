@@ -43,7 +43,7 @@ const social = [
   },
   {
     name: "My Resume",
-    icon: "document",
+    icon: "pdfdoc",
     link: "/resume.pdf",
   },
 ];
