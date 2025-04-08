@@ -6,7 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Graduate Software Engineer",
+  role: "AI Trainer",
   avatar: "/images/avatar.png",
   location: "Australia/Brisbane", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Vietnamese"], // optional: Leave the array empty if you don't want to display languages
@@ -57,7 +57,7 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Graduate Software Engineer</>,
   subline: (
     <>
       I'm Brian, an AI Trainer at <InlineCode>DataAnnotation</InlineCode>, where I craft intuitive
@@ -178,7 +178,7 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about my journey...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
