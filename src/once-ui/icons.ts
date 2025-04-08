@@ -1,3 +1,5 @@
+// import any icons here to use
+
 import { IconType } from "react-icons";
 
 import {

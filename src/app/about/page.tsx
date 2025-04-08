@@ -82,7 +82,7 @@ export default function About() {
             url: `https://${baseURL}/about`,
             image: `${baseURL}/images/${person.avatar}`,
             sameAs: social
-              .filter((item) => item.link && !item.link.startsWith("mailto:")) // Filter out empty links and email links
+              .filter((item) => item.link && !item.link.startsWith("mailto:dinhtuankhai1@gmail.com")) // Filter out empty links and email links
               .map((item) => item.link),
             worksFor: {
               "@type": "Organization",
@@ -153,8 +153,8 @@ export default function About() {
                 marginBottom="m"
                 vertical="center"
               >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Flex paddingX="8">Schedule a call</Flex>
+                <Icon paddingLeft="12" name="email" onBackground="brand-weak" />
+                <Flex paddingX="8">Contact for work</Flex>
                 <IconButton
                   href={about.calendar.link}
                   data-border="rounded"

@@ -42,11 +42,6 @@ const social = [
     link: "",
   },
   {
-    name: "Email",
-    icon: "email",
-    link: "mailto:dinhtuankhai1@gmail.com",
-  },
-  {
     name: "My Resume",
     icon: "document",
     link: "/resume.pdf",
@@ -54,7 +49,7 @@ const social = [
 ];
 
 const home = {
-  label: "Home",
+  label: "Brian Dinh | Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Graduate Software Engineer</>,
@@ -68,7 +63,7 @@ const home = {
 
 const about = {
   label: "About",
-  title: "About me",
+  title: "Brian Dinh | About",
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
@@ -79,7 +74,7 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "mailto:dinhtuankhai1@gmail.com",
   },
   intro: {
     display: true,
@@ -185,8 +180,8 @@ const blog = {
 };
 
 const work = {
-  label: "Work",
-  title: "My projects",
+  label: "Projects",
+  title: "Brian Dinh | Projects",
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
