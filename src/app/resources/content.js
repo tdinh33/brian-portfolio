@@ -55,8 +55,8 @@ const home = {
   headline: <>Graduate Software Engineer</>,
   subline: (
     <>
-      I'm Brian, an AI Trainer at <InlineCode>DataAnnotation</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Brian, an AI Trainer at <InlineCode>DataAnnotation</InlineCode>, where I work with
+      <br /> the chatbots that we are building in order to measure their progress, as well as write and evaluate code. 
     </>
   ),
 };
