@@ -1,45 +1,93 @@
 ---
-title: "Building Once UI, a Customizable Design System"
-publishedAt: "2024-04-08"
-summary: "Development of a flexible and highly customizable design system using Next.js for front-end and Figma for design collaboration."
+title: "Tonnetz Player"
+publishedAt: "2024-11-23"
+summary: "Capstone Project at QUT"
 images:
   - "/images/projects/project-01/cover-01.jpg"
   - "/images/projects/project-01/cover-02.jpg"
   - "/images/projects/project-01/cover-03.jpg"
   - "/images/projects/project-01/cover-04.jpg"
 team:
-  - name: "Selene Yu"
-    role: "Software Engineer"
-    avatar: "/images/avatar.jpg"
-    linkedIn: "https://www.linkedin.com/company/once-ui/"
-  - name: "Jane Smith"
-    role: "Product Manager"
+  - name: "Brian Dinh"
+    role: "Developer"
+    avatar: "/images/avatar.png"
+    linkedIn: "https://www.linkedin.com/in/brian-dinh-106209297/"
+  - name: "Min Le"
+    role: "Developer"
     avatar: "/images/projects/project-01/avatar-01.png"
-    linkedIn: "https://www.linkedin.com/company/once-ui/"
+    linkedIn: ""
+  - name: "Amit Nair"
+    role: "Developer"
+    avatar: "/images/projects/project-01/avatar-02.png"
+    linkedIn: ""
+  - name: "Kevin Nam"
+    role: "Developer"
+    avatar: "/images/projects/project-01/avatar-03.png"
+    linkedIn: ""
 ---
 
 ## Overview
 
-Development of a flexible and highly customizable design system using Next.js for front-end and Figma for design collaboration.
+TONNETZ PLAYER A browser-based “Tonnetz player” will enable users to directly analyse and play with the music harmony. This app allows users to input and modify notes, then play them using the Tonnetz Grid. The project aims to enhance music harmony lessons and support research in the field.
 
 ## Key Features
 
-- **Component Library**: Built a set of modular, reusable UI components using React and styled-components in Next.js, focusing on accessibility and responsiveness.
-- **Theming and Customization**: Integrated a theming system that allows easy switching and customization of color palettes, typography, and layout styles using CSS variables and Figma tokens.
-- **Figma Integration**: Collaborated closely with designers by setting up a shared design library in Figma. This library was synchronized with the codebase, ensuring design handoffs were seamless and that design tokens remained consistent across both platforms.
-- **Documentation and Usage Guidelines**: Developed comprehensive documentation with Storybook to showcase components, usage patterns, and best practices, ensuring the design system is easy to adopt by other teams.
+- **Interactive Tonnetz Grid**: 
+Visualizes musical harmony using a hexagonal note structure.
+Supports clicking individual notes, chords, and trichords to play sounds.
+
+- **Piano Roll Editorg**: MIDI file import/export, note creation/editing with drag-and-drop.
+
+- **Audio-Visual Sync**: Notes played are visually highlighted on the Tonnetz grid.
+
+- **Playback Controls**: Supports play, pause, stop, loop, and recording.
+
+- **Onboarding Tour**: Built using Intro.js to guide new users through key features and UI elements.
+
+- **Onboarding Tour**: Intro.js guides users through key features and UI elements.
+
 
 ## Technologies Used
 
-- **Next.js**: For fast, server-rendered React applications.
-- **Figma**: For creating and managing design assets and prototypes.
-- **Styled-Components**: For styling React components with a modular, themable approach.
-- **Storybook**: For building an interactive, documented component library.
+<Table data={{
+  headers: ["Category", "Tools & Libraries"],
+  rows: [
+    ["Frontend", "React.js, Tailwind CSS, HTML5, CSS3, SVG"],
+    ["Audio Handling", "Tone.js (for MIDI/audio playback and generation)"],
+    ["State Management", "React Context API"],
+    ["UI Enhancements", "Intro.js (Onboarding Tour), React DnD, React Window"],
+    ["Testing", "Vitest (for behavior-driven and UI testing)"],
+    ["Version Control", "Git + GitHub"],
+    ["Deployment", "Netlify (with CI/CD for preview builds)"],
+    ["Project Management", "Trello, Google Drive, Discord"]
+  ]
+}} />
 
 ## Challenges and Learnings
 
-One key challenge was balancing the need for flexibility with the desire to maintain design consistency. The solution involved creating well-defined design tokens and establishing clear guidelines for when and how components could be customized. Additionally, setting up effective collaboration workflows between designers and developers using Figma and Git was a learning experience that greatly improved the process.
+Positive workplace relationships can be helpful to career fulfilment and success. Understood the
+importance of making positive professional connections with team members, during the project
+initiation phase, I focused on building good work relationships, ensuring that everyone in the team fit
+in well and had a place where they could share ideas and get information on the project. A Discord
+channel was our main way of communicating. It gave us a place to work together in ideas, talk about
+problems, finisalise works together before a meeting with our tutor and client.
+My contribution was to prepare for weekly/fortnightly meetings by making sure that our goals were
+clearly in line with client priorities. During Phase 1, I used Min’s MoSCoW to make sure that our
+conversations were centred on the most important needs of our client on his “minimal viable
+product”
+. During Phase 2, I changed how I prepared to follow the sprint plan, making sure to address
+progress updates, challenges and solutions since the last meeting, as well as what the client should
+expect to see in the next meeting. This method helped keep the conversation with the client focused
+and on track of the progress, also to enhance the reliability of our team by giving our client a clear
+vision of expected outcomes in the future.
 
 ## Outcome
 
-The design system is now actively used across multiple projects, leading to faster development cycles, fewer design inconsistencies, and improved collaboration between design and development teams. It has become a foundation for scaling our products efficiently while ensuring a cohesive user experience.
+Our artefact successfully achieved its major objectives by creating a usable Tonnetz grid that
+depicts the links between musical notes and chords. The client's goals of creating a useful
+tool for interactively and captivatingly mastering chord theory are strongly related to this.
+With real-time note visualisation on the grid, the artefact allows users to upload and play
+back songs in addition to dynamically visualising chords. This feature, which was essential to
+the project's scope, guarantees that users may examine current music as well as experiment
+with musical theory. We think we have successfully fulfilled the client's expectations by
+providing a functional solution that takes care of these essential requirements.
