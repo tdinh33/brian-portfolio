@@ -52,7 +52,7 @@ const home = {
   label: "Brian Dinh | Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Graduate Software Engineer</>,
+  headline: <>Graduate Software Developer</>,
   subline: (
     <>
       I'm Brian, an AI Trainer at <InlineCode>DataAnnotation</InlineCode>, where I work with
