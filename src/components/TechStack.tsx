@@ -23,7 +23,7 @@ const technologies = [
 
 export default function TechStack() {
   return (
-    <div className="grid gap-6 md:grid-cols-2">
+    <div className="grid gap-6 lg:grid-cols-2">
       {technologies.map((tech) => (
         <Card key={tech.category} className="p-6">
           <h3 className="text-lg font-semibold mb-4">{tech.category}</h3>

@@ -7,7 +7,7 @@ import { Flex } from ".";
 
 interface RevealFxProps extends React.ComponentProps<typeof Flex> {
   children: React.ReactNode;
-  speed?: "slow" | "medium" | "fast";
+  speed?: "slow" | "medium" | "fast" | "very-fast";
   delay?: number;
   revealedByDefault?: boolean;
   translateY?: number | SpacingToken;
@@ -51,6 +51,8 @@ const RevealFx = forwardRef<HTMLDivElement, RevealFxProps>(
       switch (speed) {
         case "fast":
           return "1s";
+        case "very-fast":
+          return "0.3s";
         case "medium":
           return "2s";
         case "slow":
