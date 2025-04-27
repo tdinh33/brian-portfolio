@@ -24,9 +24,10 @@ type Metadata = {
   tag?: string;
   team: Team[];
   link?: string;
+  technologies?: string[];
 };
 
-import { notFound } from 'next/navigation';
+import { notFound } from "next/navigation";
 
 function getMDXFiles(dir: string) {
   if (!fs.existsSync(dir)) {
@@ -37,9 +38,9 @@ function getMDXFiles(dir: string) {
 }
 
 function readMDXFile(filePath: string) {
-    if (!fs.existsSync(filePath)) {
-        notFound();
-    }
+  if (!fs.existsSync(filePath)) {
+    notFound();
+  }
 
   const rawContent = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(rawContent);
@@ -53,6 +54,7 @@ function readMDXFile(filePath: string) {
     tag: data.tag || [],
     team: data.team || [],
     link: data.link || "",
+    technologies: data.technologies || [],
   };
 
   return { metadata, content };
@@ -72,7 +74,20 @@ function getMDXData(dir: string) {
   });
 }
 
-export function getPosts(customPath = ["", "", "", ""]) {
-  const postsDir = path.join(process.cwd(), ...customPath);
-  return getMDXData(postsDir);
+export function getPosts(dirPath: string[]) {
+  // Using Array.prototype.concat to create a new array
+  const args = [process.cwd()].concat(dirPath);
+  const postsDir = path.join(...args);
+  const mdxData = getMDXData(postsDir);
+
+  // Simply use the technologies directly from the frontmatter metadata
+  return mdxData.map((post) => {
+    return {
+      ...post,
+      metadata: {
+        ...post.metadata,
+        technologies: post.metadata.technologies || [],
+      },
+    };
+  });
 }

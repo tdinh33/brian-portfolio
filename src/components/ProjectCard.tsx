@@ -2,6 +2,7 @@
 
 import {
   AvatarGroup,
+  Badge,
   Carousel,
   Column,
   Flex,
@@ -19,6 +20,7 @@ interface ProjectCardProps {
   description: string;
   avatars: { src: string }[];
   link: string;
+  technologies?: string[];
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -29,6 +31,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   avatars,
   link,
+  technologies = [],
 }) => {
   return (
     <Column fillWidth gap="m">
@@ -56,11 +59,31 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
         {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
           <Column flex={7} gap="16">
-            {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
+            {avatars?.length > 0 && (
+              <AvatarGroup avatars={avatars} size="m" reverse />
+            )}
             {description?.trim() && (
-              <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
+              <Text
+                wrap="balance"
+                variant="body-default-s"
+                onBackground="neutral-weak"
+              >
                 {description}
               </Text>
+            )}
+            {technologies.length > 0 && (
+              <Flex gap="8" wrap>
+                {technologies.map((tech, index) => (
+                  <Badge
+                    key={index}
+                    title={tech}
+                    arrow={false}
+                    effect={false}
+                    paddingX="12"
+                    paddingY="4"
+                  />
+                ))}
+              </Flex>
             )}
             <Flex gap="24" wrap>
               {content?.trim() && (
